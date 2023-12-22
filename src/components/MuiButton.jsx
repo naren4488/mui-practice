@@ -1,5 +1,5 @@
-import { Stack, Button, IconButton } from "@mui/material";
-import SendIcon from '@mui/icons-material/Send';
+import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 import React from "react";
 
 export default function MuiButton() {
@@ -13,21 +13,50 @@ export default function MuiButton() {
         <Button variant="outlined">Outlined</Button>
       </Stack>
       <Stack spacing={2} direction={"row"}>
-        <Button variant="contained" color="primary">Primary</Button>
-        <Button variant="outlined" color="error">Error</Button>
-        <Button variant="text" color="success">Success</Button>
+        <Button variant="contained" color="primary">
+          Primary
+        </Button>
+        <Button variant="outlined" color="error">
+          Error
+        </Button>
+        <Button variant="text" color="success">
+          Success
+        </Button>
       </Stack>
-      <Stack display={'block'} spacing={2} direction={"row"}>
-        <Button variant="contained" size="small">Small</Button>
-        <Button variant="contained" size="medium">Medium</Button>
-        <Button variant="contained" size="large">Large</Button>
+      <Stack display={"block"} spacing={2} direction={"row"}>
+        <Button variant="contained" size="small">
+          Small
+        </Button>
+        <Button variant="contained" size="medium">
+          Medium
+        </Button>
+        <Button variant="contained" size="large">
+          Large
+        </Button>
       </Stack>
-      <Stack  spacing={2} direction={"row"}>
-        <Button variant="contained" startIcon={<SendIcon/>} disableRipple>Send</Button>
-        <Button variant="contained" endIcon={<SendIcon/>} disableElevation>Send</Button>
-        <IconButton color="success" onClick={() => alert('sent the message')}>
-            <SendIcon/>
+      <Stack spacing={2} direction={"row"}>
+        <Button variant="contained" startIcon={<SendIcon />} disableRipple>
+          Send
+        </Button>
+        <Button variant="contained" endIcon={<SendIcon />} disableElevation>
+          Send
+        </Button>
+        <IconButton color="success" onClick={() => alert("sent the message")}>
+          <SendIcon />
         </IconButton>
+      </Stack>
+      <Stack direction={"row"}>
+        <ButtonGroup
+          variant="contained"
+          color="secondary"
+          size="small"
+          aria-label="alignment buttion group"
+          orientation="vertical"
+        >
+          <Button>Left</Button>
+          <Button>Center</Button>
+          <Button onClick={() => alert('right one clicked')}>Right</Button>
+        </ButtonGroup>
       </Stack>
     </Stack>
   );
